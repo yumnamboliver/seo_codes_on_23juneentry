@@ -1,0 +1,18 @@
+//enao ebungo left side ki project directory structure gi pareng gi khwai makha da 
+// build.gradle(Module:<projectname>)   aduda nammo aduga makha ge erriba singse thengnaba jaga singda sumaina onthoko
+
+compileSdk 34
+targetSdk 34
+
+//remove (the given) and replace with the following 
+dependencies {
+
+    // jsoup HTML parser library @ https://jsoup.org/
+    implementation 'org.jsoup:jsoup:1.11.1'
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.11.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+}
