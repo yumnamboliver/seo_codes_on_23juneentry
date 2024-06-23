@@ -1,0 +1,1410 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".KRT_Activity">
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:id="@+id/type_url_cl"
+        app:layout_constraintTop_toTopOf="parent"
+        ><androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:background="#DDDDDD"
+            android:layout_marginTop="1.5dp"
+            android:id="@+id/cl_below_banner"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:textStyle="bold"
+                android:text="Enter the full URL below. \nProvide only the Link Copied\n(e.g., from your own Chrome browser or imported)."
+                android:layout_marginTop="10dp"
+
+                android:textAllCaps="false"
+                android:textSize="14dp"
+
+                android:textColor="#000000"
+                android:paddingLeft="13dp"
+                android:paddingRight="13dp"
+
+
+
+
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:id="@+id/tv_etfurl"
+                />
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                android:id="@+id/searchURL"
+
+                app:layout_constraintTop_toTopOf="@id/et_enterUrl"
+                app:layout_constraintStart_toEndOf="@id/et_enterUrl"
+                app:layout_constraintBottom_toBottomOf="@id/et_enterUrl">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:gravity="center_vertical"
+                    android:text="Search Now"
+                    android:paddingLeft="4dp"
+
+                    android:background="#F3F0F0"
+                    android:id="@+id/tv_sv"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+
+                    />
+
+                <ImageView
+                    android:layout_width="19dp"
+                    android:layout_height="30dp"
+                    app:layout_constraintStart_toEndOf="@id/tv_sv"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:src="@drawable/search_icon"
+
+                    android:background="#F3F0F0"
+
+                    />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:layout_marginBottom="1dp"
+                android:layout_marginLeft="15dp"
+                android:inputType="textPostalAddress"
+
+                android:layout_marginRight="105dp"
+                android:textSize="12dp"
+                android:background="@drawable/element_surrounding"
+                android:textColor="@color/toolbar_red"
+                app:layout_constraintTop_toBottomOf="@id/tv_etfurl"
+                android:id="@+id/et_enterUrl"
+                android:text = "https://stackoverflow.com/questions/17596144/get-favicon-from-html-jsoup"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                />
+            <!-- Recents Button-->
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="120dp"
+                android:layout_height="25dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="5dp"
+                android:id="@+id/recents_cl"
+                ><androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#F3F0F0"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginRight="22dp"
+                    android:background="#F3F0F0"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:text="Recents"
+                    android:id="@+id/tvrecent"
+                    />
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginLeft="-2dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_marginBottom="5.5dp"
+                    app:layout_constraintTop_toTopOf="parent"
+
+                    >
+                    <ImageView
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:src="@drawable/arr_top_ic_draw"
+                        android:id="@+id/topIV_rec"
+                        />
+                    <ImageView
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:src="@drawable/arr_down_ic_draw"
+                        android:id="@+id/bottomIV_rec"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <!-- CL ListView -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="280dp"
+                app:layout_constraintTop_toBottomOf="@id/et_enterUrl"
+                app:layout_constraintStart_toStartOf="parent"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:id="@+id/links_CL"
+                >
+                <ListView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/links_LV"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="105dp"
+        android:padding="10dp"
+        android:id="@+id/nscv1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        >
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:id="@+id/constraint_layout_full_report"
+
+            android:layout_height="match_parent">
+
+            <!-- 1. HTML SOURCE CODE -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/htmlsourcecode_cl"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:background="@drawable/element_surrounding"
+
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+
+                app:layout_constraintTop_toTopOf="parent"
+
+                >
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:id="@+id/htmlsourcecode_clanalyse"
+
+                    android:layout_height="wrap_content">
+                    <!-- Topic Heading -->
+                    <!-- Topic's Body -->
+                    <!-- Line drawn (for an indication of the separation between the Analysis and the Header -->
+                    <TextView
+                        android:id="@+id/tgnm2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+
+                        android:background="@color/toolbar_red"
+                        android:paddingLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:paddingTop="2.5dp"
+
+                        app:layout_constraintEnd_toEndOf="parent"
+
+                        android:paddingBottom="2.5dp"
+                        android:text="HTML Source Code"
+                        android:textColor="@color/white"
+                        android:textSize="10.5dp"
+
+                        android:textStyle="bold"
+                        tools:layout_editor_absoluteX="10dp"
+                        tools:layout_editor_absoluteY="38dp" />
+
+
+                    <ScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="370dp"
+
+                        android:paddingLeft="10dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:id="@+id/child_scrollview"
+
+                        app:layout_constraintTop_toBottomOf="@id/tgnm2"
+
+                        >
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                android:layout_marginBottom="30dp"
+                                android:layout_marginTop="5dp"
+                                android:id="@+id/tvBody2"
+                                android:text="URL Example : https://www.wikipedia.com"
+                                android:textColor="#000000"/>
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </ScrollView>
+                    <ProgressBar
+                        android:layout_width="12dp"
+                        android:layout_height="12dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginTop="2dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:indeterminateTint="@color/toolbar_red"
+                        />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <!-- 2. HEADERS -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/headers_cl"
+                android:background="@drawable/element_surrounding"
+
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/htmlsourcecode_cl"
+
+                >
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:id="@+id/headers_clanalyse"
+                    android:layout_height="wrap_content">
+                    <ProgressBar
+                        android:layout_width="12dp"
+                        android:layout_height="12dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginTop="2dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:indeterminateTint="@color/toolbar_red"
+                        />
+                    <!-- Topic Heading -->
+                    <!-- Topic's Body -->
+                    <!-- Line drawn (for an indication of the separation between the Analysis and the Header -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tgnm4"
+                        android:background="@color/amakpa_red"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="2dp"
+
+                        android:textStyle="bold"
+                        android:layout_marginTop="5dp"
+                        android:paddingTop="2.5dp"
+                        android:paddingBottom="2.5dp"
+                        android:paddingLeft="10dp"
+
+                        app:layout_constraintEnd_toEndOf="parent"
+
+                        android:textSize="10.5dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:textColor="@color/white"
+
+                        android:text="Headers"
+                        />
+                    <ScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tgnm4"
+                        android:id="@+id/parentscv3"
+                        >
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/tvBody4"
+
+
+                            android:paddingLeft="10dp"
+                            android:text="Headers Analysis.\nEnter the full URL above. "
+                            android:textColor="#000000"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            android:layout_marginBottom="5dp"
+                            app:layout_constraintTop_toBottomOf="@id/tgnm4"
+                            android:layout_marginTop="5dp"
+                            />
+                    </ScrollView>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <!-- 3. TITLE -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/title_cl"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:background="@drawable/element_surrounding"
+
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+
+                app:layout_constraintTop_toBottomOf="@id/headers_cl"
+                >
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:id="@+id/title_clanalyse"
+
+                    android:layout_height="wrap_content">
+                    <ProgressBar
+                        android:layout_width="12dp"
+                        android:layout_height="12dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginTop="2dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:indeterminateTint="@color/toolbar_red"
+                        />
+                    <!-- Topic Heading -->
+                    <!-- Topic's Body -->
+                    <!-- Line drawn (for an indication of the separation between the Analysis and the Header -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tgnm3"
+                        android:background="@color/amakpa_red"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="2dp"
+                        android:textStyle="bold"
+                        android:layout_marginTop="5dp"
+                        android:paddingTop="2.5dp"
+                        android:paddingBottom="2.5dp"
+                        android:paddingLeft="10dp"
+
+                        app:layout_constraintEnd_toEndOf="parent"
+
+                        android:textSize="10.5dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:textColor="@color/white"
+
+                        android:text="Title"
+                        />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tvBody3"
+
+
+                        android:paddingLeft="10dp"
+                        android:text="Title Analysis.\nEnter the full URL above. "
+                        android:textColor="#000000"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:layout_marginBottom="5dp"
+                        app:layout_constraintTop_toBottomOf="@id/tgnm3"
+                        android:layout_marginTop="5dp"
+                        />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <!-- 4. URL -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="9dp"
+
+                android:id="@+id/url_cl"
+                android:background="@drawable/element_surrounding"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+
+                app:layout_constraintTop_toBottomOf="@id/title_cl"
+
+                >
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:id="@+id/url_clanalyse"
+
+                    android:layout_height="wrap_content">
+                    <!-- Topic Heading -->
+                    <!-- Topic's Body -->
+                    <!-- Line drawn (for an indication of the separation between the Analysis and the Header -->
+
+                    <ProgressBar
+                        android:layout_width="12dp"
+                        android:layout_height="12dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginTop="2dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:indeterminateTint="@color/toolbar_red"
+                        />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tgnm1"
+                        android:background="@color/amakpa_red"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="2dp"
+
+                        android:textStyle="bold"
+                        android:layout_marginTop="5dp"
+                        android:paddingTop="2.5dp"
+                        android:paddingLeft="10dp"
+                        android:paddingBottom="2.5dp"
+
+
+                        android:textSize="10.5dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:textColor="@color/white"
+
+                        android:text="Website URL"
+                        />
+                    <ScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tgnm1"
+                        android:id="@+id/parentscrollview2"
+                        >
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/tvBody1"
+
+
+                            android:paddingLeft="10dp"
+                            android:text="Displays an analysis statement.\nEnter the full URL above. "
+                            android:textColor="#000000"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+
+                            app:layout_constraintTop_toBottomOf="@id/tgnm1"
+                            android:layout_marginTop="5dp"
+                            />
+
+                    </ScrollView>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+             </androidx.constraintlayout.widget.ConstraintLayout>
+            <!-- 5. BODY -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/element_surrounding"
+
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+
+                android:id="@+id/body_cl"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/url_cl"
+
+                >
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:id="@+id/body_clanalyse"
+                    android:layout_height="wrap_content">
+                    <ProgressBar
+                        android:layout_width="12dp"
+                        android:layout_height="12dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginTop="2dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:indeterminateTint="@color/toolbar_red"
+                        />
+                    <!-- Topic Heading -->
+                    <!-- Topic's Body -->
+                    <!-- Line drawn (for an indication of the separation between the Analysis and the Header -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tgnm5"
+                        android:background="@color/amakpa_red"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="2dp"
+                        android:textStyle="bold"
+                        android:layout_marginTop="5dp"
+                        android:paddingTop="2.5dp"
+                        android:paddingBottom="2.5dp"
+                        android:paddingLeft="10dp"
+
+                        app:layout_constraintEnd_toEndOf="parent"
+
+                        android:textSize="10.5dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:textColor="@color/white"
+
+                        android:text="Body"
+                        />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tvBody5"
+
+
+                        android:paddingLeft="10dp"
+                        android:text="Body Analysis.\nEnter the full URL above. "
+                        android:textColor="#000000"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:layout_marginBottom="5dp"
+                        app:layout_constraintTop_toBottomOf="@id/tgnm5"
+                        android:layout_marginTop="5dp"
+                        />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+             </androidx.constraintlayout.widget.ConstraintLayout>
+            <!-- 6. LINKS -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/links_cl"
+                android:background="@drawable/element_surrounding"
+
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/body_cl"
+
+                >
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:id="@+id/links_clanalyse"
+
+                    android:layout_height="wrap_content">
+                    <ProgressBar
+                        android:layout_width="12dp"
+                        android:layout_height="12dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginTop="2dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:indeterminateTint="@color/toolbar_red"
+                        />
+                    <!-- Topic Heading -->
+                    <!-- Topic's Body -->
+                    <!-- Line drawn (for an indication of the separation between the Analysis and the Header -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tgnm6"
+                        android:background="@color/amakpa_red"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="2dp"
+                        android:textStyle="bold"
+                        android:layout_marginTop="5dp"
+                        android:paddingTop="2.5dp"
+                        android:paddingBottom="2.5dp"
+                        android:paddingLeft="10dp"
+
+                        app:layout_constraintEnd_toEndOf="parent"
+
+                        android:textSize="10.5dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:textColor="@color/white"
+
+                        android:text="Links"
+                        />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tvBody6"
+
+
+                        android:paddingLeft="10dp"
+                        android:text="Internal Links Analysis.\nEnter the full URL above. "
+                        android:textColor="#000000"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:layout_marginBottom="5dp"
+                        app:layout_constraintTop_toBottomOf="@id/tgnm6"
+                        android:layout_marginTop="5dp"
+                        />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+             </androidx.constraintlayout.widget.ConstraintLayout>
+            <!-- 7. IMAGES -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/images_cl"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:background="@drawable/element_surrounding"
+
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+
+                app:layout_constraintTop_toBottomOf="@id/links_cl"
+
+                >
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:id="@+id/images_clanalyse"
+
+                    android:layout_height="wrap_content">
+                    <ProgressBar
+                        android:layout_width="12dp"
+                        android:layout_height="12dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginTop="2dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:indeterminateTint="@color/toolbar_red"
+                        />
+                    <!-- Topic Heading -->
+                    <!-- Topic's Body -->
+                    <!-- Line drawn (for an indication of the separation between the Analysis and the Header -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tgnm7"
+                        android:background="@color/amakpa_red"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="2dp"
+                        android:textStyle="bold"
+                        android:layout_marginTop="5dp"
+                        android:paddingTop="2.5dp"
+                        android:paddingBottom="2.5dp"
+                        android:paddingLeft="10dp"
+
+                        app:layout_constraintEnd_toEndOf="parent"
+
+                        android:textSize="10.5dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:textColor="@color/white"
+
+                        android:text="Images"
+                        />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tvBody7"
+
+
+                        android:paddingLeft="10dp"
+                        android:text="Images/&lt;img&gt; tags Analysis.\nEnter the full URL above. "
+                        android:textColor="#000000"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:layout_marginBottom="5dp"
+                        app:layout_constraintTop_toBottomOf="@id/tgnm7"
+                        android:layout_marginTop="5dp"
+                        />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+             </androidx.constraintlayout.widget.ConstraintLayout>
+            <!-- 8. KEYWORDS -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/keywords_cl"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:background="@drawable/element_surrounding"
+
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+
+                app:layout_constraintTop_toBottomOf="@id/images_cl"
+
+                >
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:id="@+id/keywords_clanalyse"
+
+                    android:layout_height="wrap_content">
+                    <ProgressBar
+                        android:layout_width="12dp"
+                        android:layout_height="12dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginTop="2dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:indeterminateTint="@color/toolbar_red"
+                        />
+                    <!-- Topic Heading -->
+                    <!-- Topic's Body -->
+                    <!-- Line drawn (for an indication of the separation between the Analysis and the Header -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tgnm8"
+                        android:background="@color/amakpa_red"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="2dp"
+                        android:textStyle="bold"
+                        android:layout_marginTop="5dp"
+                        android:paddingTop="2.5dp"
+                        android:paddingBottom="2.5dp"
+                        android:paddingLeft="10dp"
+
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:textSize="10.5dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:textColor="@color/white"
+
+                        android:text="Keywords"
+                        />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tvBody8"
+
+
+                        android:paddingLeft="10dp"
+                        android:text="Keywords Analysis.\nEnter the full URL above. "
+                        android:textColor="#000000"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:layout_marginBottom="5dp"
+                        app:layout_constraintTop_toBottomOf="@id/tgnm8"
+                        android:layout_marginTop="10dp"
+                        />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+             </androidx.constraintlayout.widget.ConstraintLayout>
+            <!-- 9. PAGE FAVICON -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/pagefavicon_cl"
+                android:background="@drawable/element_surrounding"
+
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/keywords_cl"
+
+                >
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:id="@+id/pagefavicon_clanalyse"
+
+                    android:layout_height="wrap_content">
+                    <ProgressBar
+                        android:layout_width="12dp"
+                        android:layout_height="12dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginTop="2dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:indeterminateTint="@color/toolbar_red"
+                        />
+                    <!-- Topic Heading -->
+                    <!-- Topic's Body -->
+                    <!-- Line drawn (for an indication of the separation between the Analysis and the Header -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tgnm9"
+                        android:background="@color/amakpa_red"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="2dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:textStyle="bold"
+                        android:layout_marginTop="5dp"
+                        android:paddingTop="2.5dp"
+                        android:paddingBottom="2.5dp"
+                        android:paddingLeft="10dp"
+
+                        android:textSize="10.5dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:textColor="@color/white"
+
+                        android:text="Page Favicon"
+                        />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tvBody9"
+
+
+                        android:paddingLeft="10dp"
+                        android:text="Page Favicon Analysis.\nEnter the full URL above. "
+                        android:textColor="#000000"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:layout_marginBottom="5dp"
+                        app:layout_constraintTop_toBottomOf="@id/tgnm9"
+                        android:layout_marginTop="5dp"
+                        />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+             </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+            <!-- Meta Description Tag  -->
+            <!-- Meta Robots Tag  -->
+            <!-- Meta tag View Port  -->
+            <!-- rel = "Canonical" Link Tag  -->
+            <!--  meta author tag  -->
+
+
+
+            <!--14  meta description tag  -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/metaDescription_cl"
+                app:layout_constraintStart_toStartOf="parent"
+                android:background="@drawable/element_surrounding"
+
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/pagefavicon_cl"
+                >
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:id="@+id/metaDescription_clanalyse"
+
+                    android:layout_height="wrap_content">
+                    <ProgressBar
+                        android:layout_width="12dp"
+                        android:layout_height="12dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginTop="2dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:indeterminateTint="@color/toolbar_red"
+                        />
+                    <!-- Topic Heading -->
+                    <!-- Topic's Body -->
+                    <!-- Line drawn (for an indication of the separation between the Analysis and the Header -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tgnm14"
+                        android:background="@color/amakpa_red"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="2dp"
+                        android:textStyle="bold"
+                        android:layout_marginTop="5dp"
+                        android:paddingTop="2.5dp"
+                        android:paddingBottom="2.5dp"
+                        android:paddingLeft="10dp"
+
+                        android:textSize="10.5dp"
+                        app:layout_constraintStart_toStartOf="parent"
+
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:textColor="@color/white"
+
+                        android:text="Meta Description Tag"
+                        />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tvBody14"
+
+
+                        android:paddingLeft="10dp"
+                        android:text="Meta Description Tag Analysis.\nEnter the full URL above. "
+                        android:textColor="#000000"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:layout_marginBottom="5dp"
+                        app:layout_constraintTop_toBottomOf="@id/tgnm14"
+                        android:layout_marginTop="5dp"
+                        />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+             </androidx.constraintlayout.widget.ConstraintLayout>
+            <!--15  meta robots tag  -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/metaRobots_cl"
+                app:layout_constraintStart_toStartOf="parent"
+                android:background="@drawable/element_surrounding"
+
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/metaDescription_cl"
+                >
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:id="@+id/metaRobots_clanalyse"
+
+                    android:layout_height="wrap_content">
+                    <ProgressBar
+                        android:layout_width="12dp"
+                        android:layout_height="12dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginTop="2dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:indeterminateTint="@color/toolbar_red"
+                        />
+                    <!-- Topic Heading -->
+                    <!-- Topic's Body -->
+                    <!-- Line drawn (for an indication of the separation between the Analysis and the Header -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tgnm15"
+                        android:background="@color/amakpa_red"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="2dp"
+                        android:textStyle="bold"
+                        android:layout_marginTop="5dp"
+                        android:paddingTop="2.5dp"
+                        android:paddingBottom="2.5dp"
+                        android:paddingLeft="10dp"
+
+                        android:textSize="10.5dp"
+                        app:layout_constraintStart_toStartOf="parent"
+
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:textColor="@color/white"
+
+                        android:text="Meta Robots Tag"
+                        />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tvBody15"
+
+
+                        android:paddingLeft="10dp"
+                        android:text="Meta Robots Tag Analysis.\nEnter the full URL above. "
+                        android:textColor="#000000"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:layout_marginBottom="5dp"
+                        app:layout_constraintTop_toBottomOf="@id/tgnm15"
+                        android:layout_marginTop="5dp"
+                        />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+             </androidx.constraintlayout.widget.ConstraintLayout>
+            <!--16  meta view port tag  -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/metaViewPort_tag_cl"
+                app:layout_constraintStart_toStartOf="parent"
+                android:background="@drawable/element_surrounding"
+
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/metaRobots_cl"
+                >
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:id="@+id/metaViewPort_tag_clanalyse"
+
+                    android:layout_height="wrap_content">
+                    <ProgressBar
+                        android:layout_width="12dp"
+                        android:layout_height="12dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginTop="2dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:indeterminateTint="@color/toolbar_red"
+                        />
+                    <!-- Topic Heading -->
+                    <!-- Topic's Body -->
+                    <!-- Line drawn (for an indication of the separation between the Analysis and the Header -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tgnm16"
+                        android:background="@color/amakpa_red"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="2dp"
+                        android:textStyle="bold"
+                        android:layout_marginTop="5dp"
+                        android:paddingTop="2.5dp"
+                        android:paddingBottom="2.5dp"
+                        android:paddingLeft="10dp"
+
+                        android:textSize="10.5dp"
+                        app:layout_constraintStart_toStartOf="parent"
+
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:textColor="@color/white"
+
+                        android:text="Meta tag View Port"
+                        />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tvBody16"
+
+
+                        android:paddingLeft="10dp"
+                        android:text="Meta Tag View Port Analysis.\nEnter the full URL above. "
+                        android:textColor="#000000"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:layout_marginBottom="5dp"
+                        app:layout_constraintTop_toBottomOf="@id/tgnm16"
+                        android:layout_marginTop="5dp"
+                        />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+             </androidx.constraintlayout.widget.ConstraintLayout>
+            <!--17  rel link canonical tag  -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/relCanonicalLinkTag_cl"
+                app:layout_constraintStart_toStartOf="parent"
+                android:background="@drawable/element_surrounding"
+
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/metaViewPort_tag_cl"
+                >
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:id="@+id/relCanonicalLinkTag_clanalyse"
+
+                    android:layout_height="wrap_content">
+                    <ProgressBar
+                        android:layout_width="12dp"
+                        android:layout_height="12dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginTop="2dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:indeterminateTint="@color/toolbar_red"
+                        />
+                    <!-- Topic Heading -->
+                    <!-- Topic's Body -->
+                    <!-- Line drawn (for an indication of the separation between the Analysis and the Header -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tgnm17"
+                        android:background="@color/amakpa_red"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="2dp"
+                        android:textStyle="bold"
+                        android:layout_marginTop="5dp"
+                        android:paddingTop="2.5dp"
+                        android:paddingBottom="2.5dp"
+                        android:paddingLeft="10dp"
+
+                        android:textSize="10.5dp"
+                        app:layout_constraintStart_toStartOf="parent"
+
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:textColor="@color/white"
+
+                        android:text="rel = Canonical Link Tag"
+                        />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tvBody17"
+
+
+                        android:paddingLeft="10dp"
+                        android:text="rel=Canonical tag Content Analysis.\nEnter the full URL above. "
+                        android:textColor="#000000"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:layout_marginBottom="5dp"
+                        app:layout_constraintTop_toBottomOf="@id/tgnm17"
+                        android:layout_marginTop="5dp"
+                        />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+             </androidx.constraintlayout.widget.ConstraintLayout>
+            <!--18  meta author tag  -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/meta_author_cl"
+                app:layout_constraintStart_toStartOf="parent"
+                android:background="@drawable/element_surrounding"
+
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/relCanonicalLinkTag_cl"
+                >
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:id="@+id/meta_author_clanalyse"
+
+                    android:layout_height="wrap_content">
+                    <ProgressBar
+                        android:layout_width="12dp"
+                        android:layout_height="12dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginTop="2dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:indeterminateTint="@color/toolbar_red"
+                        />
+                    <!-- Topic Heading -->
+                    <!-- Topic's Body -->
+                    <!-- Line drawn (for an indication of the separation between the Analysis and the Header -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tgnm18"
+                        android:background="@color/amakpa_red"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="2dp"
+                        android:textStyle="bold"
+                        android:layout_marginTop="5dp"
+                        android:paddingTop="2.5dp"
+                        android:paddingBottom="2.5dp"
+                        android:paddingLeft="10dp"
+
+                        android:textSize="10.5dp"
+                        app:layout_constraintStart_toStartOf="parent"
+
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:textColor="@color/white"
+
+                        android:text="Meta Author Tag"
+                        />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tvBody18"
+
+
+                        android:paddingLeft="10dp"
+                        android:text="Meta Author tag Content Analysis.\nEnter the full URL above. "
+                        android:textColor="#000000"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:layout_marginBottom="5dp"
+                        app:layout_constraintTop_toBottomOf="@id/tgnm18"
+                        android:layout_marginTop="5dp"
+                        />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+             </androidx.constraintlayout.widget.ConstraintLayout>
+            <!--19  meta keywords tag  -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/meta_keywords_cl"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+
+                android:background="@drawable/element_surrounding"
+
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="100dp"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/meta_author_cl"
+
+                >
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:id="@+id/meta_keywords_clanalyse"
+
+                    android:layout_height="wrap_content">
+                    <ProgressBar
+                        android:layout_width="12dp"
+                        android:layout_height="12dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginTop="2dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:indeterminateTint="@color/toolbar_red"
+                        />
+                    <!-- Topic Heading -->
+                    <!-- Topic's Body -->
+                    <!-- Line drawn (for an indication of the separation between the Analysis and the Header -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tgnm19"
+                        android:background="@color/amakpa_red"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="2dp"
+                        android:textStyle="bold"
+                        android:layout_marginTop="5dp"
+                        android:paddingTop="2.5dp"
+                        android:paddingBottom="2.5dp"
+                        android:paddingLeft="10dp"
+
+                        android:textSize="10.5dp"
+                        app:layout_constraintStart_toStartOf="parent"
+
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:textColor="@color/white"
+
+                        android:text="Meta KEywords Tag"
+                        />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tvBody19"
+
+
+                        android:paddingLeft="10dp"
+                        android:text="Meta Keywords tag Content Analysis.\nEnter the full URL above. "
+                        android:textColor="#000000"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:layout_marginBottom="5dp"
+                        app:layout_constraintTop_toBottomOf="@id/tgnm19"
+                        android:layout_marginTop="5dp"
+                        />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+             </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/type_url_cl"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:id="@+id/textView_when_the_report_page_is_invisible"
+        android:text="Enter a valid URL and Press Search."
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
